@@ -8,7 +8,7 @@
       "$openTimeMinutes": "30",
       "$closeTimeHours": "23",
       "$closeTimeMinutes": "00",
-      "$openTime": "+(new Date().setUTCHours($openTimeHours, $openTimeMinutes))"
+      "$openTime": "+(new Date().setUTCHours($openTimeHours, $openTimeMinutes))",
       "$closeTime": "+(new Date().setUTCHours($closeTimeHours, $closeTimeMinutes))"
     },
     {
