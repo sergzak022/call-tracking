@@ -21,7 +21,7 @@
           {
             "comment": "This will call the agent and play call flow actions to him/her.",
             "comment:params:no": "AGENT-NUMBER-TO-DIAL",
-            "comment:params:caller_id_no": ""AGENT-NUMBER-TO-DIAL",
+            "comment:params:caller_id_no": "AGENT-NUMBER-TO-DIAL",
 
             "type": "DIAL",
             "session_data": "$sessionData",
