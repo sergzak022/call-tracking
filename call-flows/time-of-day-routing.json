@@ -2,8 +2,8 @@
   "actions": [
     {
       "$callerId": "$callerNo",
-      "$openTransferNumber": "+19495964641",
-      "$closeTransferNumber": "+13233842998",
+      "$openTransferNumber": "'+19495964641'",
+      "$closeTransferNumber": "'+13233842998'",
       "$openTimeHours": "12",
       "$openTimeMinutes": "30",
       "$closeTimeHours": "23",
@@ -24,7 +24,7 @@
         {
           "type":"TRANSFER",
           "params":{
-            "no":"+19495964641"
+            "no":"${openTransferNumber}"
           }
         }
       ],
