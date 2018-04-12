@@ -1,0 +1,48 @@
+{
+  "actions": [
+    {
+      "comment": "NOTE: $openTransferNumber and $closeTransferNumber must be set to a string",
+      "$callerId": "$callerNo",
+      "$openTransferNumber": "'+19495964641'",
+      "$closeTransferNumber": "'+13233842998'",
+      "$openTimeHours": "12",
+      "$openTimeMinutes": "30",
+      "$closeTimeHours": "23",
+      "$closeTimeMinutes": "00",
+      "$openTime": "+(new Date().setUTCHours($openTimeHours, $openTimeMinutes))",
+      "$closeTime": "+(new Date().setUTCHours($closeTimeHours, $closeTimeMinutes))"
+    },
+    {
+      "type": "IF",
+      "condition": "$startTime > $openTime && $startTime < $closeTime",
+      "then": [
+        {
+          "type":"SAY",
+          "params": {
+            "text":"You have called during business hours. You'll be redirected to ${openTransferNumber}"
+          }
+        },
+        {
+          "type":"TRANSFER",
+          "params":{
+            "no":"${openTransferNumber}"
+          }
+        }
+      ],
+      "orElse": [
+        {
+          "type":"SAY",
+          "params": {
+            "text":"You have called after business hours."
+          }
+        },
+        {
+          "type":"TRANSFER",
+          "params":{
+            "no":"${closeTransferNumber}"
+          }
+        }
+      ]
+    }
+  ]
+}
