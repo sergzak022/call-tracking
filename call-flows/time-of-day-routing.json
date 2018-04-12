@@ -1,6 +1,10 @@
 {
   "actions": [
     {
+
+      "comment": "modify $openTransferNumber and $closeTransferNumber",
+      "comment": "NOTE: $openTransferNumber and $closeTransferNumber must be set to a string",
+
       "$callerId": "$callerNo",
       "$openTransferNumber": "'+19495964641'",
       "$closeTransferNumber": "'+13233842998'",
@@ -18,7 +22,7 @@
         {
           "type":"SAY",
           "params": {
-            "text":"You have called during business hours. You'll be redirected to ${openTransferNumber}"
+            "text":"You have called during business hours. You'll be redirected to ${...openTransferNumber}"
           }
         },
         {
