@@ -34,3 +34,11 @@ You'll need to provision at least 2 telephone numbers in order to follow along.
 
 3. Call the provisioned phone number.
 
+##Advanced Call Forwarding
+
+1. Modify `call-fllows/advanced-call-forwarding.json` file (Don't forget to push changes to GitHub).
+
+2. Assign this callback json file to the provisioned through Voxology phone numbers.
+
+3. Call the provisioned phone number.
+

@@ -1,0 +1,41 @@
+{
+  "actions": [
+    {
+      "$sessionData.conference_name": "$callId"
+    },
+    {
+      "type": "SAY",
+      "params": {
+        "text": "Hello. You are the customer leg and your call id is ${callId}."
+      }
+    },
+    {
+      "type": "CONFERENCE",
+      "params": {
+        "name": "${sessionData.conference_name}",
+        "max_participants": 2,
+        "end_on_exit": "true"
+      },
+      "events": {
+        "on_enter": [
+          {
+            "comment": "This will call the agent and play call flow actions to him/her.",
+            "comment:params:no": ""AGENT-NUMBER-TO-DIAL",
+            "comment:params:caller_id_no": ""AGENT-NUMBER-TO-DIAL",
+
+            "type": "DIAL",
+            "session_data": "$sessionData",
+            "params": {
+              "no": "+19495964641",
+              "caller_id_no": "CALLER-ID-FOR-SECOND-SCRIPT"
+            }
+          }
+        ]
+
+      }
+    },
+    {
+      "type": "HANGUP"
+    }
+  ]
+}

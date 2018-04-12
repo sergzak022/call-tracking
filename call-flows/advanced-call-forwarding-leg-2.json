@@ -1,0 +1,21 @@
+{
+  "actions": [
+    {
+      "type": "SAY",
+      "params": {
+        "text": "Hello. We are connecting you to a new lead."
+      }
+    },
+    {
+      "type": "CONFERENCE",
+      "params": {
+        "name": "${sessionData.conference_name}",
+        "max_participants": 2,
+        "end_on_exit": "true"
+      }
+    },
+    {
+      "type": "HANGUP"
+    }
+  ]
+}
