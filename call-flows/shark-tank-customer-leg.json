@@ -1,0 +1,47 @@
+{
+  "actions": [
+    {
+      "$sessionData.conference_name": "$callId",
+      "$agentNumbers": "['+19495964641']"
+    },
+    {
+      "type": "SAY",
+      "params": {
+        "text": "Hello. You are the customer leg."
+      }
+    },
+    {
+      "type": "CONFERENCE",
+      "params": {
+        "name": "${sessionData.conference_name}",
+        "max_participants": 2,
+        "end_on_exit": "true"
+      },
+      "events": {
+        "on_enter": [
+          {
+            "type": "FOREACH",
+            "params": {
+              "iterator": "$agentNumbers"
+            },
+            "then": [
+              {
+                "comment": "This will call the agent and play call flow actions to him/her.",
+
+                "type": "DIAL",
+                "session_data": "$sessionData",
+                "params": {
+                  "no": "${val}",
+                  "caller_id_no": "+13239029986"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "HANGUP"
+    }
+  ]
+}

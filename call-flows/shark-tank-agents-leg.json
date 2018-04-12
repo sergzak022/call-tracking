@@ -1,0 +1,73 @@
+{
+  "actions": [
+    {
+      "type": "LABEL",
+      "name": "ConfirmDigit"
+    },
+    {
+      "type": "COLLECT",
+      "actions": [
+        {
+          "type": "SAY",
+          "params": {
+            "text": "You have a customer waiting. Please press 1."
+          }
+        }
+      ],
+      "params": {
+        "finish_on_key": "#",
+        "num_digits": 1,
+        "timeout": 5000
+      }
+    },
+    {
+      "type": "IF",
+      "condition": "$keyPresses == '1'",
+      "then": [
+        {
+          "type": "GOTO",
+          "params": {
+            "label": "JoinAgent"
+          }
+        }
+      ],
+      "orElse": [
+        {
+          "type": "GOTO",
+          "params": {
+            "label": "ConfirmDigit"
+          }
+        }
+      ]
+    },
+    {
+      "type": "LABEL",
+      "name": "JoinAgent"
+    },
+    {
+      "type": "CONFERENCE",
+      "params": {
+        "name": "${sessionData.conference_name}",
+        "event": "join",
+        "end_on_exit": "true",
+        "max_participants": 2
+      },
+      "events": {
+        "on_enter_error_max_participants": [
+          {
+            "type": "SAY",
+            "params": {
+              "text": "Sorry, someone else already answered"
+            }
+          },
+          {
+            "type": "HANGUP"
+          }
+        ]
+      }
+    },
+    {
+      "type": "HANGUP"
+    }
+  ]
+}

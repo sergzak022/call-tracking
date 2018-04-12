@@ -6,7 +6,7 @@
     {
       "type": "SAY",
       "params": {
-        "text": "Hello. You are the customer leg and your call id is ${callId}."
+        "text": "Hello. You are the customer leg."
       }
     },
     {
