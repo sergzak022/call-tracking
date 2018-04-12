@@ -4,7 +4,7 @@
       "type": "TRANSFER",
       "comment": "params.no should be set to a number to redirect to",
       "params": {
-        "no": "+19495964641"
+        "no": "NUMBER-TO-REDIRECT-TO"
       }
     }
   ]

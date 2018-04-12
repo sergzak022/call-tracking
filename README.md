@@ -25,3 +25,9 @@ You'll need to provision at least 2 telephone numbers in order to follow along.
 2. Assign this callback json file to the provisioned through Voxology phone numbers.
 
 3. Call the provisioned phone number.
+
+4. If everything goes well you'll get redirected to the number that is specified in your call flow file.
+
+##Time of Day Routing
+
+1. 
