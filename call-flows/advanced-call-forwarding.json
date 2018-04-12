@@ -19,7 +19,7 @@
         {
           "type":"SAY",
           "params": {
-            "text":"You have called during business hours. You'll be redirected to ${openTransferNumber}"
+            "text":"You have called during business hours. You'll be redirected to ${...openTransferNumber}"
           }
         },
         {
