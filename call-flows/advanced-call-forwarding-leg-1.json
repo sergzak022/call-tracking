@@ -20,14 +20,12 @@
         "on_enter": [
           {
             "comment": "This will call the agent and play call flow actions to him/her.",
-            "comment:params:no": "AGENT-NUMBER-TO-DIAL",
-            "comment:params:caller_id_no": "AGENT-NUMBER-TO-DIAL",
 
             "type": "DIAL",
             "session_data": "$sessionData",
             "params": {
-              "no": "+19495964641",
-              "caller_id_no": "+13239029986"
+              "no": "AGENT-NUMBER-TO-DIAL",
+              "caller_id_no": "SECOND-SCRIPT-CALLERID"
             }
           }
         ]
