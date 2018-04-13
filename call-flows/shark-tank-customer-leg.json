@@ -2,7 +2,7 @@
   "actions": [
     {
       "$sessionData.conference_name": "$callId",
-      "$agentNumbers": "['+19495964641']"
+      "$agentNumbers": "['+AGENT-NUMBER', '+ANOTHER-AGENT-NUMBER']"
     },
     {
       "type": "SAY",
@@ -32,7 +32,7 @@
                 "session_data": "$sessionData",
                 "params": {
                   "no": "${val}",
-                  "caller_id_no": "+13239029986"
+                  "caller_id_no": "AGENT-SCRIPT-CALLERID"
                 }
               }
             ]
