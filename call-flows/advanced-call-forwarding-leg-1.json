@@ -10,6 +10,29 @@
       }
     },
     {
+      "type": "CONFERENCE",
+      "params": {
+        "name": "${sessionData.conference_name}",
+        "max_participants": 2,
+        "end_on_exit": "true"
+      },
+      "events": {
+        "on_enter": [
+          {
+            "comment": "This will call the agent and play call flow actions to him/her.",
+
+            "type": "DIAL",
+            "session_data": "$sessionData",
+            "params": {
+              "no": "+19495964641",
+              "caller_id_no": "+13239029986"
+            }
+          }
+        ]
+
+      }
+    },
+    {
       "type": "HANGUP"
     }
   ]
