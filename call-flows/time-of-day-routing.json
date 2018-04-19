@@ -18,7 +18,7 @@
     {
       "type":"SAY",
       "params": {
-        "text":"Start time is ${startTime}"
+        "text":"Start time is ${startTime.toString()}"
       }
     },
     {
