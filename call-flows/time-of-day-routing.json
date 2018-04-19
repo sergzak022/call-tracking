@@ -16,6 +16,12 @@
       "$closeTime": "+(new Date().setUTCHours($closeTimeHours, $closeTimeMinutes))"
     },
     {
+      "type":"SAY",
+      "params": {
+        "text":"Start time is ${startTime}"
+      }
+    },
+    {
       "type": "IF",
       "condition": "$startTime > $openTime && $startTime < $closeTime",
       "then": [
