@@ -24,8 +24,8 @@
             "type": "DIAL",
             "session_data": "$sessionData",
             "params": {
-              "no": "AGENT-NUMBER-TO-DIAL",
-              "caller_id_no": "SECOND-SCRIPT-CALLERID"
+              "no": "+19495964641",
+              "caller_id_no": "+13239029986"
             }
           }
         ]
