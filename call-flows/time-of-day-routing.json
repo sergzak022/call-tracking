@@ -13,12 +13,13 @@
       "$closeTimeHours": "23",
       "$closeTimeMinutes": "00",
       "$openTime": "+(new Date().setUTCHours($openTimeHours, $openTimeMinutes))",
-      "$closeTime": "+(new Date().setUTCHours($closeTimeHours, $closeTimeMinutes))"
+      "$closeTime": "+(new Date().setUTCHours($closeTimeHours, $closeTimeMinutes))",
+      "test": "startTime.toString()"
     },
     {
       "type":"SAY",
       "params": {
-        "text":"Start time is ${startTime.toString()}"
+        "text":"Start time is ${test}"
       }
     },
     {
