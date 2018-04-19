@@ -14,7 +14,7 @@
       "$closeTimeMinutes": "00",
       "$openTime": "+(new Date().setUTCHours($openTimeHours, $openTimeMinutes))",
       "$closeTime": "+(new Date().setUTCHours($closeTimeHours, $closeTimeMinutes))",
-      "test": "startTime.toString()"
+      "test": "$startTime.toString()"
     },
     {
       "type":"SAY",
