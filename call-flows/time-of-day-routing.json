@@ -30,6 +30,9 @@
           "params":{
             "no":"${openTransferNumber}"
           }
+        },
+        {
+          "type": "HANGUP"
         }
       ],
       "orElse": [
