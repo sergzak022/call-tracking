@@ -24,13 +24,13 @@
     {
       "type": "SAY",
       "params": {
-        "text": "Start time is ${...openTime}"
+        "text": "Open time is ${...openTime}"
       }
     },
     {
       "type": "SAY",
       "params": {
-        "text": "Start time is ${...closeTime}"
+        "text": "Close time is ${...closeTime}"
       }
     },
     {
