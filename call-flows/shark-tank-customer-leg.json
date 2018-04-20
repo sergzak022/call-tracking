@@ -2,7 +2,7 @@
   "actions": [
     {
       "$sessionData.conference_name": "$callId",
-      "$agentNumbers": "['+19495964641', '+19495964649']"
+      "$agentNumbers": "['+13233842998', '+12177223742']"
     },
     {
       "type": "SAY",
