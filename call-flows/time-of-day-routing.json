@@ -22,6 +22,18 @@
       }
     },
     {
+      "type": "SAY",
+      "params": {
+        "text": "Start time is ${...openTime}"
+      }
+    },
+    {
+      "type": "SAY",
+      "params": {
+        "text": "Start time is ${...closeTime}"
+      }
+    },
+    {
       "type": "IF",
       "condition": "$startTime > $openTime && $startTime < $closeTime",
       "then": [
